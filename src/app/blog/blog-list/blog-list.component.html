@@ -1,0 +1,14 @@
+<div class="row">
+                  <div class="col-md-4">
+                    <div class="image"><a href="blog/{{item.id}}"><img src="assets/img/blog-medium.jpg" alt="Example blog post alt" class="img-fluid"></a></div>
+                  </div>
+                  <div class="col-md-8">
+                    <h2 class="h3 mt-0"><a href="blog/{{item.id}}">{{item.name}}</a></h2>
+                    <div class="d-flex flex-wrap justify-content-between text-xs">
+                      <p class="author-category">By <a href="javascript:void(0)">{{item.created_by}}</a> in <a href="javascript:void(0)">Webdesign</a></p>
+                      <p class="date-comments"><a><i class="fa fa-calendar-o"></i> {{item.created_on}}</a><a href="javascript:void(0)"><i class="fa fa-comment-o"></i> 8 Comments</a></p>
+                    </div>
+                    <p class="intro">{{item.description}}</p>
+                    <p class="read-more text-right"><a href="blog/{{item.id}}" class="btn btn-template-outlined">Continue reading</a></p>
+                  </div>
+                </div>

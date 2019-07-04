@@ -1,0 +1,34 @@
+<div id="heading-breadcrumbs" class="border-top-0 border-bottom-0">
+        <div class="container">
+          <div class="row d-flex align-items-center flex-wrap">
+            <div class="col-md-7">
+              <h1 class="h2">Blog Listing</h1>
+            </div>
+            <div class="col-md-5">
+              <ul class="breadcrumb d-flex justify-content-end">
+                <li class="breadcrumb-item"><a href="home">Home</a></li>
+                <li class="breadcrumb-item active">Blog Listing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="container"> 
+		  <div class="bar">
+			  <div class="row pull-right">
+					<p class="read-more"><a href="blog/add" class="btn btn-template-outlined">Add</a></p>
+			  </div>
+		  </div>
+          <div class="row bar" *ngIf="!listError">
+            <div id="blog-listing-medium" class="col-md-12">
+              <section class="post" *ngFor="let item of listData">
+                <app-blog-list [record]="item"></app-blog-list>
+              </section> 
+            </div>
+          </div>
+		  <div class="row bar" *ngIf="listError"> 
+			<h3>{{listError}}</h3>
+          </div>
+        </div>
+      </div>
